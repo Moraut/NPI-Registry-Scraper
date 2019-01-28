@@ -78,8 +78,7 @@ for(i in (1:nrow(input)))
   
   # Percent-encode the URL generated above for ensuring it's a valid URL
   url  = URLencode(u)
-  
-  
+    
   print(url)
   
   # Parse the HTML - print to console if read_html fails and skip the record
@@ -116,9 +115,7 @@ for(i in (1:nrow(input)))
   # Split address to address, city, state and ZIP
   # Handle possible multiple matches by running a loop
   for(j in (1:nrow(output)))
-  {
-
-    
+  {  
     temp=do.call(rbind,strsplit(gsub("\r","",gsub("\t","",as.character(output$Primary.Practice.Address[j]))), "\n"))
     output$Address[j]=temp[1]
     temp2 = do.call(rbind,strsplit(as.character(temp[2]), ", "))
