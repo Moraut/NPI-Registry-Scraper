@@ -19,8 +19,7 @@ head(input, 5)
 
 ##################Colname Edit#######################
 input$qid=NA
-colnames(input)=c("npi","name_last","name_first", "city","state","zip","qid")
-
+colnames(input)=c("npi","name_last","name_first", "city","state
 
 
 # Specify NPI registry home URL as "root"
